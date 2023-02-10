@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <h4 class="heading">Language Translator</h4>
+  <div class="main">
+    <div class="container">
+        <div class="wrapper">
+            <div class="text-input">
+                <textarea class="from-text" placeholder="Enter Text"></textarea>
+                 <ul class="controls">
+                    <li class="row from">
+                        <div class="icons">
+                            <i id="from" class="fas fa-volume-up"></i>
+                            <i id="from" class="fas fa-copy"></i>
+                        </div>
+                        <select></select>
+                    </li>
+                    <li class="exchange"><i class="fas fa-exchange-alt"></i></li>
+                    <li class="row to">
+                        <select></select>
+                        <div class="icons">
+                            <i id="to" class="fas fa-volume-up"></i>
+                            <i id="to" class="fas fa-copy"></i>
+                        </div>
+                    </li>
+                 </ul>
+                <textarea class="to-text" placeholder="Translation" readonly disabled></textarea>
+            </div>
+            
+        </div>
+        <button>Translate Text</button>
+    </div>
+  </div>
+ <div class="social-media-icons">
+    <ul>
+        <li>
+            <a  target="_blank" href="https://github.com/bhavanas-jpg"><i class="bx bxl-github"></i></a>
+        </li>
+        <li>
+            <a  target="_blank" href="https://www.linkedin.com/in/bhavana-s-38513a168"><i
+                    class="bx bxl-linkedin"></i></a>
+        </li>
+        <li>
+            <a  target="_blank" href="https://twitter.com/Bhavana814"><i class="bx bxl-twitter"></i></a>
+       </ul>
+ </div>
+  
+  <script src="countries.js"></script>
+ <script src="script.js"></script>
+
+</body>
+</html>
