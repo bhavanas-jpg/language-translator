@@ -30,7 +30,7 @@ body{
     background: #fff;
     border-radius: 7px;
     padding: 30px;
-    
+    margin-bottom: 20px;
 }
 .wrapper{
     border-radius: 5px;
@@ -122,6 +122,17 @@ body{
     color: #fff;
     font-size: 20px
 }
+.error-message{
+    background: red;
+    color: #fff;
+    width: 690px;
+    padding: 10px 0 10px 50px ;
+    font-size: 18px;
+    margin: 0 auto;
+    display: none;
+    border-radius: 3px;
+    font-weight: 500;
+}
 
 /**media queries for mobile **/
 @media(min-width: 320px) and (max-width: 840px){
@@ -131,6 +142,10 @@ body{
     }
     .main{
         margin-top: 40px;
+    }
+    .error-message{
+        width: 340px;
+        font-size: 16px;
     }
     .container{
         width: 340px;
@@ -176,4 +191,8 @@ body{
  .container{
     width: 520px;
  }
+ .error-message{
+    width: 520px;
+    font-size: 16px;
+}
 }

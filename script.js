@@ -5,6 +5,14 @@ const fromText = document.querySelector('.from-text'),
       translateBtn = document.querySelector('button'),
       exchangeIcon = document.querySelector('.exchange'),
       icons = document.querySelectorAll('.row i');
+      let errorMsg = document.querySelector('.error-message');
+
+      fromText.addEventListener('input', (e)=>{
+        errorMsg.style.display=  "none";
+        if(e.target.value == ''){
+            toText.value = '';
+        }
+      })
     
       selectTag.forEach((tag, id)=>{
         for(const country_code in countries){
@@ -30,11 +38,28 @@ const fromText = document.querySelector('.from-text'),
             selectTag[1].value = tempLang;
       })
 
+     
+
       translateBtn.addEventListener("click", ()=>{
-        let text = fromText.value;
-        let translateFrom = selectTag[0].value;
-        let translateTo = selectTag[1].value;
-        let apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
+        let text, 
+        translateFrom, 
+        translateTo ,
+        apiUrl;
+
+        if(fromText.value == ''){
+            errorMsg.style.display=  "block";
+            errorMsg.innerText = "Please enter the text";
+            
+        }
+        else{
+            errorMsg.style.display=  "none";
+            text = fromText.value;
+            translateFrom = selectTag[0].value;
+            translateTo = selectTag[1].value;
+            apiUrl = `https://api.mymemory.translated.net/get?q=${text}&langpair=${translateFrom}|${translateTo}`;
+        }
+         
+       
 
         fetch(apiUrl)
         .then(res => res.json())
